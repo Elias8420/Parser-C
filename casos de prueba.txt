@@ -1,0 +1,210 @@
+PROYECTO PARSER-C - FASE 1
+PUNTO 3: PRUEBAS DEL PARSER DE C++
+========================================
+
+Total: 18 pruebas
+Entradas aceptadas: 8
+Entradas rechazadas: 10
+Coincidencia con resultado esperado: 18 de 18
+
+
+========================================
+PRUEBA 1 - ASIGNACION SIMPLE
+Resultado real: ACEPTADO
+========================================
+int main() {
+    x = 10;
+}
+
+========================================
+PRUEBA 2 - FALTA DE PUNTO Y COMA
+Resultado real: RECHAZADO
+Error: se esperaba ';' pero llegó '}'
+========================================
+int main() {
+    x = 10
+}
+
+========================================
+PRUEBA 3 - OPERACION ARITMETICA
+Resultado real: ACEPTADO
+========================================
+int main() {
+    int resultado = 5 + 3 * 2;
+}
+
+========================================
+PRUEBA 4 - CONDICIONAL IF
+Resultado real: ACEPTADO
+========================================
+int main() {
+    int edad = 20;
+    if (edad >= 18) {
+        edad = edad + 1;
+    }
+}
+
+========================================
+PRUEBA 5 - CICLO WHILE
+Resultado real: ACEPTADO
+========================================
+int main() {
+    int contador = 0;
+    while (contador < 5) {
+        contador = contador + 1;
+    }
+}
+
+========================================
+PRUEBA 6 - INSTRUCCION COUT
+Resultado real: ACEPTADO
+========================================
+int main() {
+    int numero = 25;
+    cout << numero;
+}
+
+========================================
+PRUEBA 7 - EXPRESION ARITMETICA INCOMPLETA
+Resultado real: RECHAZADO
+Error: se esperaba un operando pero llegó ';'
+========================================
+int main() {
+    int resultado = 5 + ;
+}
+
+========================================
+PRUEBA 8 - DECLARACION SIN IDENTIFICADOR
+Resultado real: RECHAZADO
+Error: se esperaba 'ID' pero llegó '='
+========================================
+int main() {
+    int = 20;
+}
+
+========================================
+PRUEBA 9 - IF SIN PARENTESIS DE CIERRE
+Resultado real: RECHAZADO
+Error: se esperaba ')' pero llegó '{'
+========================================
+int main() {
+    int edad = 20;
+    if (edad >= 18 {
+        edad = edad + 1;
+    }
+}
+
+========================================
+PRUEBA 10 - FALTA LLAVE DE CIERRE
+Resultado real: RECHAZADO
+Error: se esperaba '}' pero llegó fin de archivo
+========================================
+int main() {
+    int numero = 10;
+    numero = numero + 5;
+
+========================================
+PRUEBA 11 - OPERADOR ARITMETICO INCORRECTO
+Resultado real: RECHAZADO
+Error: se esperaba un operando pero llegó '*'
+========================================
+int main() {
+    int resultado = * 5;
+}
+
+========================================
+PRUEBA 12 - COUT SIN OPERADOR <<
+Resultado real: RECHAZADO
+Error: se esperaba '<<' pero llegó 'numero'
+========================================
+int main() {
+    int numero = 25;
+    cout numero;
+}
+
+========================================
+PRUEBA 13 - CICLO DO WHILE VALIDO
+Resultado real: ACEPTADO
+========================================
+int main() {
+    int contador = 0;
+    do {
+        contador = contador + 1;
+    } while (contador < 5);
+}
+
+========================================
+PRUEBA 14 - CICLO FOR VALIDO
+Resultado real: ACEPTADO
+========================================
+int main() {
+    for (int i = 0; i < 5; i++) {
+        cout << i;
+    }
+}
+
+========================================
+PRUEBA 15 - SWITCH VALIDO
+Resultado real: ACEPTADO
+========================================
+int main() {
+    int opcion = 2;
+
+    switch (opcion) {
+        case 1:
+            opcion = 10;
+            break;
+        case 2:
+            opcion = 20;
+            break;
+        default:
+            opcion = 0;
+    }
+}
+
+========================================
+PRUEBA 16 - DO WHILE SIN PUNTO Y COMA FINAL
+Resultado real: RECHAZADO
+Error: se esperaba ';' pero llegó '}'
+========================================
+int main() {
+    int contador = 0;
+    do {
+        contador++;
+    } while (contador < 5)
+}
+
+========================================
+PRUEBA 17 - FOR SIN PRIMER PUNTO Y COMA
+Resultado real: RECHAZADO
+Error: se esperaba ';' pero llegó 'i'
+========================================
+int main() {
+    for (int i = 0 i < 5; i++) {
+        cout << i;
+    }
+}
+
+========================================
+PRUEBA 18 - SWITCH SIN DOS PUNTOS EN CASE
+Resultado real: RECHAZADO
+Error: se esperaba ':' pero llegó 'opcion'
+========================================
+int main() {
+    int opcion = 2;
+
+    switch (opcion) {
+        case 1
+            opcion = 10;
+            break;
+        case 2:
+            opcion = 20;
+            break;
+        default:
+            opcion = 0;
+    }
+}
+
+========================================
+FIN DEL REGISTRO
+========================================
